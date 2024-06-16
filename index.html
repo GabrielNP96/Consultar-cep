@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultar Cep</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Consultar Cep</h1>
+        </header>
+        <form action="#">
+            <label for="input-cep"></label><input type="text" pattern="^\\d{5}-\\d{3}$" id="input-cep" required>
+            <button type="submit">Consular o cep</button>
+        </form>
+        <span class="answer"></span>
+    </main>
+</body>
+</html>
