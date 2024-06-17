@@ -5,14 +5,21 @@ const btn = document.querySelector('.btn')
 async function ConsultCep(cep) {
     try {
         const searchCep = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
-        return await searchCep.json()
+        const cepInfo = await searchCep.json()
+
+        answerField.innerHTML = 
+        `
+            <p>Cep: ${cepInfo.cep}</p>
+            <p>Estado: ${cepInfo.uf}</p> 
+            <p>Localidade: ${cepInfo.localidade}</p>
+            <p>logradouro: ${cepInfo.logradouro}</p>
+        `
     } catch(error) {
         answerField.innerHTML += `<p class='error-mensage'>Ouve um erro ao consular o cep, tente novamente.</p>`
     }
 }
 
 
-const cepInfo = ConsultCep("01001000")
+ConsultCep("01001000")
 
-cepInfoLogradouro = cepInfo.logradouro;
-console.log(cepInfoLogradouro)
+
