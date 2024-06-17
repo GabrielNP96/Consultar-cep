@@ -66,6 +66,10 @@ body {
     color: red;
   }
   
+  .address {
+    text-align: center;
+  }
+
   @media (max-width: 768px) {
     input[type="text"] {
       font-size: 16px;

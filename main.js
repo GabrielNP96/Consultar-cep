@@ -8,10 +8,12 @@ async function ConsultCep() {
         const cepInfo = await searchCep.json()
         const addresHTML = 
         `
-            <p>Cep: ${cepInfo.cep}</p>
-            <p>Estado: ${cepInfo.uf}</p> 
-            <p>Localidade: ${cepInfo.localidade}</p>
-            <p>logradouro: ${cepInfo.logradouro}</p>
+            <div class = 'address'>
+                <p>Cep: ${cepInfo.cep}</p>
+                <p>Estado: ${cepInfo.uf}</p> 
+                <p>Localidade: ${cepInfo.localidade}</p>
+                <p>Logradouro: ${cepInfo.logradouro}</p>
+            </div>
         `
 
         answerField.innerHTML = addresHTML
